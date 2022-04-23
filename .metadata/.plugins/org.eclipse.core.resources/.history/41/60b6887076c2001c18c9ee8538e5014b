@@ -1,0 +1,43 @@
+package br.com.healthtrack;
+
+import javax.swing.JOptionPane;
+
+public class Teste {
+	public static void main(String[] args) {
+		ContaPremium p1 = new ContaPremium();
+		ContaFree f1 = new ContaFree();
+		Medidas medidaUm = new Medidas ();
+		
+		String a = JOptionPane.showInputDialog("Qual seu nome?");
+		p1.setNome(a);
+		String b = JOptionPane.showInputDialog("Qual seu e-mail para Login?");
+		p1.setEmailLogin(b);
+		String c = JOptionPane.showInputDialog("Qual sua data de nascimento? (dd/mm/aaaa)");
+		p1.setDataNascimento(c);
+		int d = Integer.parseInt(JOptionPane.showInputDialog("Qual sua idade?"));
+		p1.setIdade(d);
+		float e = Float.parseFloat(JOptionPane.showInputDialog("Qual sua altura?"));
+		medidaUm.setAltura(e);
+		float f = Float.valueOf(JOptionPane.showInputDialog("Qual seu Peso?"));
+		medidaUm.setPeso(f);
+		String g = JOptionPane.showInputDialog("Qual seu endereço?");
+		p1.setEndereco(g); 
+		String h = JOptionPane.showInputDialog("Cadastre sua senha:");
+		p1.setSenha(h);
+		
+		System.out.println(p1.nome);
+		System.out.println(p1.emailLogin);
+		System.out.println(p1.dataNascimento);
+		System.out.println(p1.idade);
+		System.out.println(medidaUm.altura);
+		System.out.println(medidaUm.peso);
+		System.out.println(p1.endereco);
+		System.out.println(p1.senha);
+		JOptionPane.showConfirmDialog(null, "Seus dados estão corretos?", null, 0);
+		
+		medidaUm.calcularPesoInicial();
+		
+		
+	}
+
+}

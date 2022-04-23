@@ -1,0 +1,35 @@
+package br.com.healthtrack;
+
+import javax.swing.JOptionPane;
+
+public class Teste {
+	public static void main(String[] args) {
+		Usuario usuarioUm = new Usuario();
+		Medidas medidaUm = new Medidas ();
+		
+		usuarioUm.nome = JOptionPane.showInputDialog("Qual seu nome?");
+		usuarioUm.emailLogin = JOptionPane.showInputDialog("Qual seu e-mail para Login?");
+		usuarioUm.dataNascimento = JOptionPane.showInputDialog("Qual sua data de nascimento? (dd/mm/aaaa)");	
+		usuarioUm.idade = Integer.parseInt(JOptionPane.showInputDialog("Qual sua idade?"));
+		medidaUm.altura =  Float.parseFloat(JOptionPane.showInputDialog("Qual sua altura?"));
+		float x = Float.valueOf(JOptionPane.showInputDialog("Qual seu Peso?"));
+		medidaUm.setPeso(x);
+		usuarioUm.endereco = JOptionPane.showInputDialog("Qual seu endereço?");
+		usuarioUm.senha = JOptionPane.showInputDialog("Cadastre sua senha:");
+		
+		System.out.println(usuarioUm.nome);
+		System.out.println(usuarioUm.emailLogin);
+		System.out.println(usuarioUm.dataNascimento);
+		System.out.println(usuarioUm.idade);
+		System.out.println(medidaUm.altura);
+		System.out.println(medidaUm.peso);
+		System.out.println(usuarioUm.endereco);
+		System.out.println(usuarioUm.senha);
+		JOptionPane.showConfirmDialog(null, "Seus dados estão corretos?", null, 0);
+		
+		medidaUm.calcularPesoInicial();
+		
+		
+	}
+
+}

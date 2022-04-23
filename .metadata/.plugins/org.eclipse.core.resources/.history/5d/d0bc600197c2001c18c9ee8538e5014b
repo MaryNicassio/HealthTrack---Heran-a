@@ -1,0 +1,59 @@
+package br.com.healthtrack;
+
+/* A classe Exercicio armazena o nome do exercicio, número do mesmo, tempo de duração, tipo de exercicio e o nome do video do exercicio
+ */
+
+public class Exercicio {
+	protected String nomeExercicio;
+	protected int nrExercicio;
+	protected float tempoDuracao;
+	protected String tipoExercicio;
+	protected String video;
+	
+	protected String getNomeExercicio() {
+		return nomeExercicio;
+	}
+
+	protected void setNomeExercicio(String nomeExercicio) {
+		this.nomeExercicio = nomeExercicio;
+	}
+
+	protected int getNrExercicio() {
+		return nrExercicio;
+	}
+
+	protected void setNrExercicio(int nrExercicio) {
+		this.nrExercicio = nrExercicio;
+	}
+
+	protected float getTempoDuracao() {
+		return tempoDuracao;
+	}
+
+	protected void setTempoDuracao(float tempoDuracao) {
+		this.tempoDuracao = tempoDuracao;
+	}
+
+	protected String getTipoExercicio() {
+		return tipoExercicio;
+	}
+
+	protected void setTipoExercicio(String tipoExercicio) {
+		this.tipoExercicio = tipoExercicio;
+	}
+
+	protected String getVideo() {
+		return video;
+	}
+
+	protected void setVideo(String video) {
+		this.video = video;
+	}
+	
+	/* O metódo criarExercicio informa que o exercicio foi criado
+	 */
+
+	protected static void criarExercicio () {
+		System.out.println("Exercicio criado com sucesso!");
+	}
+}

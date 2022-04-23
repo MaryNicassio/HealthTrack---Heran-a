@@ -1,0 +1,20 @@
+package br.com.healthtrack;
+
+import javax.swing.JOptionPane;
+
+public class Teste {
+	public static void main(String[] args) {
+		Usuario usuarioUm = new Usuario();
+		Peso pesoUm = new Peso ();
+		
+		usuarioUm.nome = JOptionPane.showInputDialog("Qual seu nome?");
+		usuarioUm.pesoInicial = Float.valueOf(JOptionPane.showInputDialog("Qual seu Peso?"));
+		
+		System.out.println(usuarioUm.nome);
+		System.out.println(usuarioUm.pesoInicial);
+		
+		   pesoUm.usuarioUm.pesoInicial = pesoUm.peso;
+		   pesoUm.calcularPeso();
+	}
+
+}

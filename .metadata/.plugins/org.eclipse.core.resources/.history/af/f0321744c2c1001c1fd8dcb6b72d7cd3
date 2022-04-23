@@ -1,0 +1,34 @@
+package br.com.healthtrack;
+
+import javax.swing.JOptionPane;
+
+/*  A classe Nutricao armazena as informações de dieta e refeições além das kcal */
+
+public class Nutricao {
+	protected String dieta;
+	Refeicao tiporefeicao = new Refeicao();
+
+	public String getDieta() {
+		return dieta;
+	}
+
+	public void setDieta(String dieta) {
+		this.dieta = dieta;
+	}
+
+	public Refeicao getTiporefeicao() {
+		return tiporefeicao;
+	}
+
+	public void setTiporefeicao(Refeicao tiporefeicao) {
+		this.tiporefeicao = tiporefeicao;
+	}
+/* O metódo adicionarDietas() recebe a informação de dieta escolhida e devolve a informação
+	 */
+	public void adicionarDietas() {
+		dieta = JOptionPane.showInputDialog("Digite a dieta escolhida");
+		System.out.println("Foi adicionado a dieta " + dieta);
+	}
+	
+
+}

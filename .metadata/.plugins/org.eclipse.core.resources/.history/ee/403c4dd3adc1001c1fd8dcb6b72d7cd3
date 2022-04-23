@@ -1,0 +1,55 @@
+package br.com.healthtrack;
+
+import javax.swing.JOptionPane;
+
+/* A classe peso armazena as informações de descrição do peso, quilos perdidos, total dos quilos perdidos e a data
+ */
+
+public class Peso {
+	protected float peso;
+	protected float novoPeso;
+	protected float totalQuilosPerdidos;
+	protected String dataPeso;
+	Usuario usuarioUm = new Usuario();
+	
+	public float getPeso() {
+		return peso;
+	}
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+	public float getNovoPeso() {
+		return novoPeso;
+	}
+	public void setNovoPeso(float novoPeso) {
+		this.novoPeso = novoPeso;
+	}
+	public float getTotalQuilosPerdidos() {
+		return totalQuilosPerdidos;
+	}
+	public void setTotalQuilosPerdidos(float totalQuilosPerdidos) {
+		this.totalQuilosPerdidos = totalQuilosPerdidos;
+	}
+	public String getDataPeso() {
+		return dataPeso;
+	}
+	public void setDataPeso(String dataPeso) {
+		this.dataPeso = dataPeso;
+	}
+	
+	/* O metódo CalcularPeso() recebe os dados de descricaoPeso, quilosPerdidos e calcula o total de quilos perdidos na variável totalQuilosPerdidos
+	 */
+		public void calcularPeso() {
+			peso = usuarioUm.pesoInicial;
+			novoPeso = Float.valueOf(JOptionPane.showInputDialog("Digite o seu peso"));
+			totalQuilosPerdidos = novoPeso - peso;
+			System.out.println("Voce Perdeu " + totalQuilosPerdidos);
+		}
+	/*O metódo adicionarDataPeso recebe a informação de data do dia
+	 */
+		public void adicionarDataPeso() {
+			dataPeso = JOptionPane.showInputDialog("Digite a data no formato dd/mm/aaaa");
+			System.out.println("Foi adicionado a data " + dataPeso);
+		}
+
+}
